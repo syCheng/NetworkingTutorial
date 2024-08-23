@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MirrorProjects/Scenes/Conference.unity
-    guid: 4c967b2fc577c314d95bb7edaf4ffc3b
+    path: Assets/MirrorProjects/Scenes/CustomNetworkManager.unity
+    guid: 27ccd49d81cf2c145b3fd27e9fadcf8a
   m_configObjects: {}

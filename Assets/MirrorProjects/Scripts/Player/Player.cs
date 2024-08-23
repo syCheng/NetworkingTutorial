@@ -21,5 +21,41 @@ public class Player : NetworkBehaviour
     void Update()
     {
         HandleMovement();
+
+
+        if(isLocalPlayer)
+        {
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("Sending hola to server!");
+                Hola();
+            }
+        }
+
+       
     }
+
+
+    [Command]
+    void Hola()
+    {
+        Debug.Log("Received hola from the client!");
+        ReplyHola();
+    }
+
+    [TargetRpc]
+    void ReplyHola()
+    {
+        Debug.Log("Received hola from server!");        
+    }
+
+    [ClientRpc]
+    void TooHigh()
+    {
+        Debug.Log("Too high!");
+    }
+
+
+
+
 }
